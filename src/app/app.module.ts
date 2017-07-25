@@ -1,5 +1,10 @@
+import 'hammerjs';
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from '@angular/material';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
@@ -21,6 +26,9 @@ import { RegisterComponent } from './register/index';
 @NgModule({
   imports: [
     BrowserModule,
+    FlexLayoutModule,
+    BrowserAnimationsModule,
+    MaterialModule,
     FormsModule,
     HttpModule,
     routing
