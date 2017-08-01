@@ -1,7 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
-@import "app/login/login.scss";
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import 'app/login/login.scss';
+@import 'app/example/example.scss';
 body,
 html {
     margin: 0;
@@ -9,7 +10,7 @@ html {
     height: 100%;
 }
 
-body.myApp {
+ng-component {
     height: 100%;
 }
 

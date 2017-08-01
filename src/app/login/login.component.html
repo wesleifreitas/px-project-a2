@@ -4,7 +4,7 @@
         <form name="form" (ngSubmit)="f.form.valid && login()" #f="ngForm" novalidate>
             <div fxLayout="column">
                 <md-input-container>
-                    <input placeholder="Usuário" mdInput type="text" name="username" [(ngModel)]="model.username" #username="ngModel" required />
+                    <input mdInput placeholder="Usuário" type="text" name="username" [(ngModel)]="model.username" #username="ngModel" required />
                     <div class="ng-message" *ngIf="username.errors && (username.dirty || username.touched || f.submitted)">
                         <div [hidden]="!username.errors.required">
                             Campo obrigatório.
@@ -13,7 +13,7 @@
                 </md-input-container>
 
                 <md-input-container>
-                    <input placeholder="Senha" mdInput type="password" name="password" [(ngModel)]="model.password" #password="ngModel" required />
+                    <input mdInput placeholder="Senha" type="password" name="password" [(ngModel)]="model.password" #password="ngModel" required />
                     <div class="ng-message" *ngIf="password.errors && (password.dirty || password.touched || f.submitted)">
                         <div [hidden]="!password.errors.required">
                             Campo obrigatório.
