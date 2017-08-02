@@ -5,6 +5,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from '@angular/material';
+import { CdkTableModule } from '@angular/cdk';
+import { MdDataTableModule } from 'ng2-md-datatable';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
@@ -23,6 +25,7 @@ import { HomeComponent } from './home/index';
 import { LoginComponent } from './login/index';
 import { RegisterComponent } from './register/index';
 import { ExampleComponent } from './example/index';
+import { Example2Component } from './example2/index';
 
 @NgModule({
   imports: [
@@ -30,6 +33,8 @@ import { ExampleComponent } from './example/index';
     FlexLayoutModule,
     BrowserAnimationsModule,
     MaterialModule,
+    CdkTableModule,
+    MdDataTableModule,
     FormsModule,
     HttpModule,
     routing
@@ -40,7 +45,8 @@ import { ExampleComponent } from './example/index';
     HomeComponent,
     LoginComponent,
     RegisterComponent,
-    ExampleComponent
+    ExampleComponent,
+    Example2Component
   ],
   providers: [
     AuthGuard,

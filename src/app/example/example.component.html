@@ -27,22 +27,7 @@
                 Atualizar
             </button> -->
         </md-toolbar>
-        <!--
-        <md-toolbar class="md-table-toolbar md-default" ng-hide="vm.example.selected.length">
-            <div class="md-toolbar-tools">
-                <span>Exemplo</span>
-                <span flex></span>
-                <button [color]="primary" ng-click="vm.create()">
-                    <md-icon>add</md-icon>
-                    Adicionar
-                </button>
-                <button [color]="primary" ng-click="vm.getData({reset: true})">
-                    <md-icon>refresh</md-icon>
-                    Atualizar
-                </button>
-            </div>
-        </md-toolbar>
-        -->
+
         <!--
         <md-toolbar class="md-accent md-hue-1" ng-show="vm.example.selected.length">
             <div class="md-toolbar-tools">
@@ -53,7 +38,40 @@
                 </button>
             </div>
         </md-toolbar>
+        -->
 
+        <!---
+        <ng2-md-datatable selectable="true">
+            <ng2-md-datatable-header>
+                <ng2-md-datatable-column sortableValue="article">Article</ng2-md-datatable-column>
+                <ng2-md-datatable-column sortableValue="product">Product</ng2-md-datatable-column>
+                <ng2-md-datatable-column sortableValue="quantity" numeric>Quantity</ng2-md-datatable-column>
+            </ng2-md-datatable-header>
+            <tbody>
+                <ng2-md-datatable-row selectableValue="K003-0350-001">
+                    <td>K003-0350-001</td>
+                    <td>Yirgacheffe Kaffee, 350g ganze Bohne</td>
+                    <td class="numeric">232</td>
+                </ng2-md-datatable-row>
+                <ng2-md-datatable-row selectableValue="K003-0350-002">
+                    <td>K003-0350-002</td>
+                    <td>Yirgacheffe Kaffee, 350g gemahlen</td>
+                    <td class="numeric">124</td>
+                </ng2-md-datatable-row>
+                <ng2-md-datatable-row selectableValue="K003-0350-003">
+                    <td>K003-0350-003</td>
+                    <td>Yirgacheffe Kaffee, 1kg ganze Bohne</td>
+                    <td class="numeric">464</td>
+                </ng2-md-datatable-row>
+                <ng2-md-datatable-row selectableValue="K003-0350-004">
+                    <td>K003-0350-003</td>
+                    <td>Yirgacheffe Kaffee, 1kg gemahlen</td>
+                    <td class="numeric">243</td>
+                </ng2-md-datatable-row>
+            </tbody>
+        </ng2-md-datatable>
+        -->
+        <!--
         <md-table-container fxLayout="column" class="fix-head">
             <div class="overflow">
                 <table md-table md-row-select="true" multiple="true" ng-model="vm.example.selected" md-progress="vm.example.promise">
@@ -84,6 +102,6 @@
         <div>
             <md-table-pagination md-label="{page: 'Página:', rowsPerPage: 'Qtd. por página:', of: 'de'}" md-limit="vm.example.limit" md-page="vm.example.page" md-total="{{vm.example.total}}" md-page-select md-on-paginate="vm.example.pagination"></md-table-pagination>
         </div>
--->
+        -->
     </div>
 </div>

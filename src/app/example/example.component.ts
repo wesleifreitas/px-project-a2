@@ -12,7 +12,6 @@ export class ExampleComponent {
 
     constructor(
         private router: Router) { }
-
     example() {
     }
 }

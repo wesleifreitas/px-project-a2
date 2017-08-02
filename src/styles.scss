@@ -1,8 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import '~ng2-md-datatable/datatable-theme';
+@include mat-core();
+// define your own colors here ;)
+$primary: mat-palette($mat-indigo);
+$accent: mat-palette($mat-pink);
+$warn: mat-palette($mat-red);
+$theme: mat-light-theme($primary, $accent, $warn);
+@include angular-material-theme($theme);
+@include mat-datatable-theme($theme);
 @import 'app/login/login.scss';
 @import 'app/example/example.scss';
+@import 'app/example2/example2.scss';
 body,
 html {
     margin: 0;
