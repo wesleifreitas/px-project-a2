@@ -20,8 +20,8 @@ import { routing } from './app.routing';
 
 import { AuthGuard } from './guards/index';
 import { AuthenticationService } from './shared';
-import { HomeComponent } from './home/index';
 import { LoginComponent } from './login/index';
+import { HomeComponent } from './home/index';
 import { ExampleComponent } from './example/index';
 import { Example2Component } from './example2/index';
 
@@ -39,8 +39,8 @@ import { Example2Component } from './example2/index';
   ],
   declarations: [
     AppComponent,
-    HomeComponent,
     LoginComponent,
+    HomeComponent,
     ExampleComponent,
     Example2Component
   ],

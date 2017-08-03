@@ -3,8 +3,8 @@
 import { LoginComponent } from './login/index';
 import { AuthGuard } from './guards/index';
 import { HomeComponent } from './home/index';
-import { ExampleComponent } from './example/index'
-import { Example2Component } from './example2/index'
+import { ExampleComponent } from './example/index';
+import { Example2Component } from './example2/index';
 
 const appRoutes: Routes = [
     { path: '', component: HomeComponent, canActivate: [AuthGuard] },
