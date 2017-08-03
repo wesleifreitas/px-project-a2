@@ -11,19 +11,17 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 // used to create fake backend
-import { fakeBackendProvider } from './_helpers/index';
+import { fakeBackendProvider } from './shared';
 import { MockBackend, MockConnection } from '@angular/http/testing';
 import { BaseRequestOptions } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { routing } from './app.routing';
 
-import { AlertComponent } from './_directives/index';
-import { AuthGuard } from './_guards/index';
-import { AlertService, AuthenticationService, UserService } from './_services/index';
+import { AuthGuard } from './guards/index';
+import { AuthenticationService } from './shared';
 import { HomeComponent } from './home/index';
 import { LoginComponent } from './login/index';
-import { RegisterComponent } from './register/index';
 import { ExampleComponent } from './example/index';
 import { Example2Component } from './example2/index';
 
@@ -41,18 +39,14 @@ import { Example2Component } from './example2/index';
   ],
   declarations: [
     AppComponent,
-    AlertComponent,
     HomeComponent,
     LoginComponent,
-    RegisterComponent,
     ExampleComponent,
     Example2Component
   ],
   providers: [
     AuthGuard,
-    AlertService,
     AuthenticationService,
-    UserService,
 
     // providers used to create fake backend
     fakeBackendProvider,

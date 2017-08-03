@@ -1,7 +1,7 @@
 ﻿import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 
-import { AlertService, AuthenticationService } from '../_services/index';
+import { AuthenticationService } from '../shared';
 
 @Component({
     moduleId: module.id.toString(),
@@ -16,10 +16,18 @@ export class LoginComponent implements OnInit {
     constructor(
         private route: ActivatedRoute,
         private router: Router,
-        private authenticationService: AuthenticationService,
-        private alertService: AlertService) { }
+        private authenticationService: AuthenticationService/*/,
+        private alertService: AlertService*/) { }
 
     ngOnInit() {
+        //fake
+        let users = [{
+            username: 'admin',
+            password: 'admin'
+        }];
+
+        localStorage.setItem('users', JSON.stringify(users));
+
         // reset login status
         this.authenticationService.logout();
 
@@ -31,12 +39,12 @@ export class LoginComponent implements OnInit {
         this.loading = true;
         this.authenticationService.login(this.model.username, this.model.password)
             .subscribe(
-                data => {
-                    this.router.navigate([this.returnUrl]);
-                },
-                error => {
-                    this.alertService.error(error);
-                    this.loading = false;
-                });
+            data => {
+                this.router.navigate([this.returnUrl]);
+            },
+            error => {
+                //this.alertService.error(error);
+                this.loading = false;
+            });
     }
 }
